@@ -8,16 +8,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
 import 'hammerjs';
-
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FuseModule } from '@fuse/fuse.module';
 import { FuseSharedModule } from '@fuse/shared.module';
 import { FuseProgressBarModule, FuseSidebarModule, FuseThemeOptionsModule } from '@fuse/components';
 
 import { fuseConfig } from 'app/fuse-config';
-
+import { FakeDbService } from 'app/fake-db/fake-db.service';
 import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
-import { SampleModule } from 'app/main/sample/sample.module';
+import { ProjectDashboardModule } from 'app/main/sample/project.module';
 
 const appRoutes: Routes = [
     {
@@ -54,7 +54,11 @@ const appRoutes: Routes = [
 
         // App modules
         LayoutModule,
-        SampleModule
+        ProjectDashboardModule,
+        InMemoryWebApiModule.forRoot(FakeDbService, {
+            delay             : 0,
+            passThruUnknownUrl: true
+        }),
     ],
     bootstrap   : [
         AppComponent
