@@ -19,7 +19,7 @@ export class AmChartComponent {
   public columns = 5;
   
   public panels: any = [
-  {sizeX: 1, sizeY: 1, row: 0, col: 0, content : '<ng-template #content><app-first-chart></app-first-chart></ng-template>' },
+  {sizeX: 1, sizeY: 1, row: 0, col: 0, content : '<ng-template #content></ng-template>' },
   {sizeX: 3, sizeY: 2, row: 0, col: 1, content: '<div class="content">2</div>'},
   {sizeX: 1, sizeY: 3, row: 0, col: 4, content: '<div class="content">2</div>'},
   {sizeX: 1, sizeY: 1, row: 1, col: 0, content: '<div class="content">3</div>'},

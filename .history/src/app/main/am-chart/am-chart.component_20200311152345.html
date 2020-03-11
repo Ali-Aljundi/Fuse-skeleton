@@ -1,0 +1,7 @@
+
+<div class="control-section">
+    <ejs-dashboardlayout id='defaultLayout' #defaultLayout [columns]='columns' [allowResizing]='true' [cellSpacing]='cellSpacing' [panels]='panels' >
+    </ejs-dashboardlayout>
+</div>
+{{panels[0].<ng-content #name></ng-content>
+}}

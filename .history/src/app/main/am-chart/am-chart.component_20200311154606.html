@@ -1,0 +1,13 @@
+
+<div class="control-section">
+    <ejs-dashboardlayout id='defaultLayout' #defaultLayout [columns]='columns' [allowResizing]='true' [cellSpacing]='cellSpacing' >
+        <e-panels>
+            <e-panel [sizeX] = "1"  [sizeY] = "1"  [row] = "0"  [col] = "0">
+                <ng-template #content>
+                    <app-first-chart></app-first-chart>
+                </ng-template>
+            </e-panel>
+        </e-panels>
+    </ejs-dashboardlayout>
+</div>
+

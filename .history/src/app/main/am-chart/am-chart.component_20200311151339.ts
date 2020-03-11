@@ -11,16 +11,18 @@ import { DashboardLayoutComponent  } from '@syncfusion/ej2-angular-layouts';
 export class AmChartComponent { 
 
   
+
   constructor(private zone: NgZone){
     
   }
-
+ 
+  
   public cellSpacing: number[] = [10, 10];
   public columns = 5;
   
   public panels: any = [
-  {sizeX: 1, sizeY: 1, row: 0, col: 0, content : '<ng-template #content><app-first-chart></app-first-chart></ng-template>' },
-  {sizeX: 3, sizeY: 2, row: 0, col: 1, content: '<div class="content">2</div>'},
+  {sizeX: 1, sizeY: 1, row: 0, col: 0, content : '<div id="chartdiv" style="width: 100%; height: 500px"></div>' },
+  {sizeX: 3, sizeY: 2, row: 0, col: 1, content: ''},
   {sizeX: 1, sizeY: 3, row: 0, col: 4, content: '<div class="content">2</div>'},
   {sizeX: 1, sizeY: 1, row: 1, col: 0, content: '<div class="content">3</div>'},
   {sizeX: 2, sizeY: 1, row: 2, col: 0, content: '<div class="content">4</div>'},
@@ -28,4 +30,8 @@ export class AmChartComponent {
   {sizeX: 1, sizeY: 1, row: 2, col: 3, content: '<div class="content">6</div>'},
   ];
 
+}
+
+
+ 
 }
