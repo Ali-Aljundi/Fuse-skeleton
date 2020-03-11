@@ -1,0 +1,28 @@
+
+    <div class="control-section" >
+        <ejs-dashboardlayout id='defaultLayout' #defaultLayout [columns]='columns' [allowResizing]='true' [cellSpacing]='cellSpacing'  >
+            <e-panels>
+                <e-panel [sizeX]="2" [sizeY]="1" [row]="0" [col]="0" [minSizeX]='1' [minSizeY]='1'>
+                <ng-template #content>
+                    <app-widget></app-widget>
+                </ng-template>
+                </e-panel>\
+                <e-panel [sizeX]="2" [sizeY]="1" [row]="0" [col]="0">
+
+                    <ng-template #content>
+                        <app-widget></app-widget>
+                    </ng-template>
+                </e-panel>
+                <e-panel [sizeX]="2" [sizeY]="1" [row]="0" [col]="0">
+                    <ng-template #content>
+                        <app-widget></app-widget>
+                    </ng-template>
+                </e-panel>
+                <e-panel [sizeX]="2" [sizeY]="1" [row]="0" [col]="0">
+                    <ng-template #content>
+                        <app-widget></app-widget>
+                    </ng-template>
+                </e-panel>
+            </e-panels>
+        </ejs-dashboardlayout>
+    </div>
