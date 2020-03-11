@@ -16,7 +16,7 @@ import { FuseWidgetModule } from '@fuse/components/widget/widget.module';
 
 import { ProjectDashboardComponent } from 'app/main/sample/project.component';
 import { ProjectDashboardService } from 'app/main/sample/project.service';
-
+import { AngularResizedEventModule } from 'angular-resize-event';
 const routes: Routes = [
     {
         path     : '**',
@@ -44,7 +44,7 @@ const routes: Routes = [
         MatTabsModule,
 
         NgxChartsModule,
-
+        AngularResizedEventModule,
         FuseSharedModule,
         FuseSidebarModule,
         FuseWidgetModule
