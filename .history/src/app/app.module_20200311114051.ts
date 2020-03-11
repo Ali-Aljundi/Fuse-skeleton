@@ -22,16 +22,18 @@ import { LayoutModule } from 'app/layout/layout.module';
 
 
 const appRoutes: Routes = [
+    
     {
         path      : 'sample',
-        loadChildren: 'app/main/sample/project.module#ProjectDashboardModule'
+        loadChildren: 'app/main/sample/project.module#ProjectDashboardComponent'
     }
     ,
     {
         path      : 'am-chart',
         loadChildren : './main/am-chart/am-chart.module#AmChartModule'
     }
-
+   
+    
 ];
 
 @NgModule({

@@ -18,20 +18,19 @@ import { FakeDbService } from 'app/fake-db/fake-db.service';
 import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 
-
+import { AmChartModule } from './main/am-chart/am-chart.module';
 
 
 const appRoutes: Routes = [
     {
-        path      : 'sample',
-        loadChildren: 'app/main/sample/project.module#ProjectDashboardModule'
-    }
-    ,
-    {
         path      : 'am-chart',
         loadChildren : './main/am-chart/am-chart.module#AmChartModule'
+    },
+    {
+        path      : 'sample',
+        loadChildren: 'app/main/sample/project.module#AmChartModule'
     }
-
+    
 ];
 
 @NgModule({
@@ -59,10 +58,10 @@ const appRoutes: Routes = [
         FuseSharedModule,
         FuseSidebarModule,
         FuseThemeOptionsModule,
-        
+
         // App modules
         LayoutModule,
-        
+        AmChartModule,
         
         InMemoryWebApiModule.forRoot(FakeDbService, {
             delay             : 0,

@@ -27,6 +27,7 @@ export const navigation: FuseNavigation[] = [
                 translate: 'AM-Chart',
                 type     : 'item',
                 url      : '/am-chart',
+               
             }
         ]
     }

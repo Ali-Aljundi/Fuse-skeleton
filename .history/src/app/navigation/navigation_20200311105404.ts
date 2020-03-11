@@ -27,6 +27,12 @@ export const navigation: FuseNavigation[] = [
                 translate: 'AM-Chart',
                 type     : 'item',
                 url      : '/am-chart',
+                badge    : {
+                    title    : '25',
+                    translate: 'NAV.SAMPLE.BADGE',
+                    bg       : '#F44336',
+                    fg       : '#FFFFFF'
+                }
             }
         ]
     }

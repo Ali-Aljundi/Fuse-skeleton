@@ -20,13 +20,6 @@ export const navigation: FuseNavigation[] = [
                     bg       : '#F44336',
                     fg       : '#FFFFFF'
                 }
-            },
-            {
-                id       : 'am-chart',
-                title    : 'AM-Chart',
-                translate: 'AM-Chart',
-                type     : 'item',
-                url      : '/am-chart',
             }
         ]
     }
