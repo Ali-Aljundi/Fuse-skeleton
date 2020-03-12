@@ -7,7 +7,7 @@ import { fuseAnimations } from '@fuse/animations';
 
 import { ProjectDashboardService } from 'app/main/sample/project.service'; 
 import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
-
+import { ResizedEvent } from 'angular-resize-event';
 @Component({
     selector     : 'project-dashboard',
     templateUrl  : './project.component.html',
@@ -17,6 +17,8 @@ import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 })
 export class ProjectDashboardComponent implements OnInit
 {
+    width: number;
+    height: number;
     projects: any[];
     selectedProject: any;
 
@@ -178,6 +180,11 @@ export class ProjectDashboardComponent implements OnInit
     {
         this._fuseSidebarService.getSidebar(name).toggleOpen();
     }
+
+    onResized(event: ResizedEvent) {
+        this.width = event.newWidth;
+        this.height = event.newHeight;
+      }
 }
 
 export class FilesDataSource extends DataSource<any>
@@ -208,5 +215,6 @@ export class FilesDataSource extends DataSource<any>
     disconnect(): void
     {
     }
+
 }
 

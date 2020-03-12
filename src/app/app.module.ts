@@ -17,13 +17,24 @@ import { fuseConfig } from 'app/fuse-config';
 import { FakeDbService } from 'app/fake-db/fake-db.service';
 import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
-import { ProjectDashboardModule } from 'app/main/sample/project.module';
+
 
 const appRoutes: Routes = [
     {
-        path      : '**',
-        redirectTo: 'sample'
+        path      : 'sample',
+        loadChildren :'./main/sample/project.module#ProjectDashboardModule'
+    },
+   
+    {
+        path      : 'resizing',
+        loadChildren :'./main/resizing/resizing.module#ResizingModule'
+    },
+    {
+        path:'',
+        redirectTo:'/resizing',
+        pathMatch:'full'
     }
+
 ];
 
 @NgModule({
@@ -54,7 +65,7 @@ const appRoutes: Routes = [
 
         // App modules
         LayoutModule,
-        ProjectDashboardModule,
+
         InMemoryWebApiModule.forRoot(FakeDbService, {
             delay             : 0,
             passThruUnknownUrl: true

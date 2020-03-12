@@ -20,7 +20,17 @@ export const navigation: FuseNavigation[] = [
                     bg       : '#F44336',
                     fg       : '#FFFFFF'
                 }
+            },
+            {
+                id       : 'resizing',
+                title    : 'Resizing',
+                type     : 'item',
+                icon     : 'email',
+                url      : '/resizing',
             }
+
+
+
         ]
     }
 ];
