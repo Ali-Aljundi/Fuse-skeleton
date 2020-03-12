@@ -19,7 +19,6 @@ import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 
 
-
 const appRoutes: Routes = [
     {
         path      : 'sample',
@@ -29,6 +28,11 @@ const appRoutes: Routes = [
     {
         path      : 'resizing',
         loadChildren :'./main/resizing/resizing.module#ResizingModule'
+    },
+    {
+        path:'',
+        redirectTo:'/resizing',
+        pathMatch:'full'
     }
 
 ];

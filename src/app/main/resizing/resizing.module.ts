@@ -18,16 +18,20 @@ import { FuseSharedModule } from '@fuse/shared.module';
 import { FuseSidebarModule } from '@fuse/components';
 import { FuseWidgetModule } from '@fuse/components/widget/widget.module';
 import { WidgetComponent } from './widget/widget.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { AccordionModule } from '@syncfusion/ej2-angular-navigations';
+import { FirstChartComponent } from './am-chart/first-chart/first-chart.component';
+import { TagCloudComponent } from './am-chart/Tag-cloud/tag-cloud.component';
 
 const routes: Routes  = [
   {
       path     : '**',
       component: ResizingComponent
-  }
+  },
 ];
 
 @NgModule({
-  declarations: [ResizingComponent, WidgetComponent],
+  declarations: [ResizingComponent, WidgetComponent, FirstChartComponent, TagCloudComponent],
   imports: [
     RouterModule.forChild(routes),
     CommonModule, 
@@ -44,6 +48,8 @@ const routes: Routes  = [
     FuseSharedModule,
     FuseSidebarModule,
     FuseWidgetModule,
+    MatExpansionModule,
+    AccordionModule
   ]
 })
 export class ResizingModule { }
